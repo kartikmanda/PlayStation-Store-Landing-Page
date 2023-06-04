@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: rgb(0, 212, 255);
+    background: linear-gradient(90deg, rgba(0, 212, 255, 1) 0%, rgba(251, 82, 131, 1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 100%;
+}
+
+
+.container-main {
+    margin: 3%;
+    width: 80%; 
+    box-shadow: 0 0 1rem 0 rgb(0, 0, 0, 0.2); 
+    border-radius: 20px; 
+    background-color: #FFFFFF;
+    display: flex; 
+    flex-direction: column; 
+    padding: 10px; 
+    overflow: hidden;
+}
+
+
+.container-top {
+    width: 100%; 
+    display: flex; 
+    align-items: center;
+}
+
+.logo {
+    height: 40px; 
+    margin: 30px 0; 
+}
+
+nav {
+    width: 100%;
+    text-align: right; 
+}
+
+li {
+    list-style: none; 
+    display: inline; 
+    margin-right: 30px; 
+}
+
+.nav-link {
+    cursor: pointer; 
+    text-decoration: none;
+    color: black; 
+    font-size: 14px;
+}
+
+.nav-link:hover { 
+    color: #FB5A8F; 
+}
+
+
+
+.container-middle-1 {
+    display: flex;
+    justify-content: space-between;
+    margin: 100px 0;
+    
+}
+
+.middle-items {
+    margin-left: 50px;
+    position: relative;
+}
+
+.middle-items::before { 
+    content: ""; 
+    width: 10px;
+    height: 57%;
+    background: linear-gradient(#ff469f, #ff6062);
+    position: absolute;
+    left: -40px;
+    top: 8px;
+}
+
+h2 {
+    font-size: 54px;
+}
+
+h3 {
+    font-size: 30px;
+    color: #707070;
+    font-weight: 300; 
+    margin: 20px 0;
+}
+
+.middle-items p {
+    font-size: 16px;
+    color: #b7b7b7;
+    font-weight: 350;
+}
+
+h4 {
+    font-size: 20px;
+    color: #000;
+    margin: 30px 0;
+}
+
+.buy {
+    width: 145px;
+    border: none; 
+    color: white;
+    padding: 12px 10px;
+    outline: none; 
+    background: linear-gradient(to right, #fb5283, #ff3527); 
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.buy img {
+    width: 30px;
+    display: none;
+}
+
+.buy:hover {
+    width: 160px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.buy:hover img {
+    display: block;
+
+}
+
+.container-middle-2 {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.controller {
+    width: 90%; 
+    z-index: 2; 
+    animation: moveController 2s infinite alternate ease-in-out
+}
+
+.add-cart {
+    z-index: 2;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.add-cart img {
+    width: 100%;
+    height: 100%;
+    max-width: 55px;
+}
+
+.color-box {
+    position: absolute; 
+    right: 0; 
+    top: 0; 
+    background: linear-gradient(to right, #fb5283, #ff3527);
+    height: 100%;
+    width: 80%;
+    border-radius: 20px 0 0 20px; 
+    z-index: 1;
+    transform: translateX(150px);
+}
+
+
+
+.container-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img {
+    height: 20px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.tw-logo {
+    height: 20px;
+    width: 22px;
+    margin: 20px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+
+.menu-icon {
+    width: 25px;
+    margin-right: 15px;
+    display: none;
+
+}
+
+
+
+@media (max-width: 760px) {
+    .container-main {
+    margin: 0;
+    border-radius: 0px;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+    }
+
+    .container-middle-1 {
+        flex-direction: column-reverse;
+    }
+
+    .container-middle-2 {
+        margin-bottom: 50px;
+    }
+
+    .color-box {
+        transform: translateX(70px);
+    }
+
+
+    #menu-list {
+        position: relative;
+        top: 60px;
+        left: 60px;
+        overflow: hidden;
+        transition: all 0.8s ease-in-out;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    .link {
+        display: block;
+        margin-top: 5px;
+    }
+}
+
+@keyframes moveController {
+    from {
+        transform: translate(-5%, -5%) rotate(-5deg);
+    }
+
+
+
+
+}
